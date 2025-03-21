@@ -1,0 +1,23 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@sauber/table@0.1": "0.1.0",
+    "npm:lodash@^4.17.21": "4.17.21"
+  },
+  "jsr": {
+    "@sauber/table@0.1.0": {
+      "integrity": "528a02e0023c9e4aa00e438bebd9224263e718fac35fe833bc80b937e3d5ae65"
+    }
+  },
+  "npm": {
+    "lodash@4.17.21": {
+      "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@sauber/table@0.1",
+      "npm:lodash@^4.17.21"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "tasks": {
+    "start":{
+      "description": "starts a game to run for given number of seconds and for a given number of players",
+      "command": "deno --allow-net start-game.js"
+    },
+    "join":{
+      "description": "joins a math game hosted a given ipaddr as given name",
+      "command": "deno --allow-net join-game.js"
+    },
+    "build-client":{
+      "description": "builds the game player binary for macos",
+      "command": "deno compile --allow-net --output ./bin/join-math-game ./join-game.js"
+    },
+    "build-server":{
+      "description": "builds the game server binary for macos",
+      "command": "deno compile --allow-net --output ./bin/start-math-game ./start-game.js"
+    },
+    "clean":{
+      "description": "cleans binaries",
+      "command": "rm ./bin/*"
+    },
+    "build":{
+      "description": "builds all binaries",
+      "dependencies": ["build-client","build-server"]
+    }
+  },
+  "imports": {
+    "@sauber/table": "jsr:@sauber/table@^0.1.0",
+    "lodash": "npm:lodash@^4.17.21"
+  }
+}
